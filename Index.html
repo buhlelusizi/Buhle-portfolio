@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <title>My Portfolio</title> 
+ <link rel="shortcut icon" href="download.png"/>
+ <link rel="stylesheet" type="text/css" href="Stylesheet.css"/>
+<script src="https://kit.fontawesome.com/c8e4d183c2.js"
+crossorigin="anonymous"></script>
+</head>
+<body>
+<section id="main">
+    <nav>
+    <a href="#" class="logo">Buhle Lusizi</a>
+    <ul class="menu">
+    <li><a href="#main" class="active">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#achievements">Achievements</a></li>
+    <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="name">
+  <p>Hello</p>
+  <h1> My name is Buhle</h1>
+  <p class="details">I am an experienced web developer who is eager to learn. I love challanges and I am a team player</p>
+  <a href="Buhle Lusizi.pdf" class="cv-btn">View CV</a>
+</div>
+  </section>
+  <section id="about">
+  <div class="about-text">
+  <h1>About Me</h1>
+  <h4>I am currently working as an intern at Younglings, I am also a trainee at Codetelligent. I worked as an assitant teacher at Masithembe Educare Centre, I have N4 Financial Management from Northlink College. I did matric in the year 2016 at Mandela School of Science and Technology.</h4>
+  <h2>Skills</h2>
+  <h3><ol>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+
+</ol>
+</h3>
+</div>
+    
+   </div>
+   <img src="b (1).jpeg" width="400" height="500" border="15px" border-color="white">
+  </section>
+
+  <section id="projects">
+    <div class="timeline">
+     <center><h2>Project 1</h2></center> 
+      <div class="container left">
+        <div class="content">
+          
+          <p>I was part of a group that created a web page for a local church called Fountain Of Hope, using HTML,CSS and JAVASCRIPT<br>
+          <a href="https://agitated-hugle-a73baf.netlify.app">Fountain Of Hope</a>
+        </div>
+      </div>
+      <div class="container right">
+        <div class="content">
+          <h2>Project 2</h2>
+          <p>I was part of a group that created an emergency app using HTML,CSS and JAVASCRIPT
+            <a href="gbv/home.html"> GVB</p></a>
+        </div>
+      </div>
+      <div class="container left">
+        <div class="content">
+          <h2>Project 3</h2>
+          <p>I created an online poetry book using CSS,HTML and javascript
+            <a href="file:///C:/Users/buhle/Desktop/Online%20book/Flip.html">Online book</a></p>
+        </div>
+      </div>
+      <div class="container right">
+        <div class="content">
+          <h2>Project 4</h2>
+          <p><a href="https://thirsty-hoover-fbfd38.netlify.app">Artist portfolio</a>
+        
+        </div>
+      </div>
+  </section>
+  <center>
+  <section id="achievements">
+    <h2 style="color:black;">Certificates</h2>
+        
+    <div class="certificate">
+      <img src="certificate.jpg" alt="5 Terre" style="width:70%">
+      <div class="box">
+      <p>HTML & CSS Fundamentals</p>
+      </div>
+    </div>
+  
+    
+    <div class="certificate">
+      <img src="Cert.JPG" alt="5 Terre" style="width:70%">
+      <div class="box">
+      <p>HTML & CSS Fundamentals</p>
+      </div>
+    </div>
+
+    <div class="certificate">
+      <img src="Cert  a.JPG" alt="5 Terre" style="width:70%">
+      <div class="box">
+      <p>HTML & CSS Fundamentals</p>
+      </div>
+    </div>
+  </center>
+  </section>
+  <section class="contact" id="contact">
+    <div class="title">
+    <center><h2 class="titleText">Contact</h2>
+    <p>Contact us using the details below</p>
+   
+    <div class="form-container">
+        <form name="frmContact" id="" frmContact"" method="post"
+            action="https://formspree.io/f/mrgodwev" enctype="multipart/form-data"
+            onsubmit="return validateContactForm()">
+  
+            <div class="input-row">
+                <label style="padding-top: 20px;">Name</label> <span
+                    id="userName-info" class="info"></span><br /> <input
+                    type="text" class="input-field" name="userName"
+                    id="userName" />
+            </div>
+            </div>
+            <div class="input-row">
+                <label>Email</label> <span id="userEmail-info"
+                    class="info"></span><br /> <input type="text"
+                    class="input-field" name="_replyto" id="userEmail" />
+            </div>
+            <div class="input-row">
+                <label>Subject</label> <span id="subject-info"
+                    class="info"></span><br /> <input type="text"
+                    class="input-field" name="subject" id="subject" />
+            </div>
+            <div class="input-row">
+                <label>Message</label> <span id="userMessage-info"
+                    class="info"></span><br />
+                <textarea name="message" id="content"
+                    class="input-field" cols="60" rows="6"></textarea>
+            </div>
+            <div>
+                <input type="submit" name="send" class="btn-submit"
+                    value="Send" />
+  
+                <div id="statusMessage"> 
+                        <?php
+                        if (! empty($message)) {
+                            ?>
+                            <p class='<?php echo $type; ?>Message'><?php echo $message; ?></p>
+                        <?php
+                        }
+                        ?>
+                    </div>
+            </div>
+        </form>
+    </div>
+  
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"
+        type="text/javascript"></script>
+    <script type="text/javascript">
+        function validateContactForm() {
+            var valid = true;
+  
+            $(".info").html("");
+            $(".input-field").css('border', '#e0dfdf 1px solid');
+            var userName = $("#userName").val();
+            var userEmail = $("#userEmail").val();
+            var subject = $("#subject").val();
+            var content = $("#content").val();
+            
+            if (userName == "") {
+                $("#userEmail-info").html("Required.");
+                $("#userName").css('border', '#e66262 1px solid');
+                valid = false;
+            }
+            if (userEmail == "") {
+                $("#userEmail-info").html("Required.");
+                $("#userEmail").css('border', '#e66262 1px solid');
+                valid = false;
+            }
+            if (!userEmail.match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/))
+            {
+                $("#userEmail-info").html("Invalid Email Address.");
+                $("#userEmail").css('border', '#e66262 1px solid');
+                valid = false;
+            }
+  
+            if (subject == "") {
+                $("#userEmail-info").html("Required.");
+                $("#subject").css('border', '#e66262 1px solid');
+                valid = false;
+            }
+            if (content == "") {
+                $("#userEmail-info").html("Required.");
+                $("#content").css('border', '#e66262 1px solid');
+                valid = false;
+            }
+            return valid;
+        }
+      </center>
+  </script> 
+  </section>
+  </body>
+  </html>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
